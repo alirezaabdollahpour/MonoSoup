@@ -194,7 +194,6 @@ Repository: <https://github.com/alirezaabdollahpour/MonoSoup>
 @inproceedings{abdollahpoorrostam2026monosoup,
   title     = {Model soups need only one ingredient},
   author    = {Abdollahpoorrostam, Alireza and Dimitriadis, Nikolaos and Hazimeh, Adam and Frossard, Pascal},
-  booktitle = {International Conference on Machine Learning (ICML)},
   year      = {2026},
   note      = {Under review},
   url       = {https://github.com/alirezaabdollahpour/MonoSoup}
