@@ -38,7 +38,6 @@ from pathlib import Path
 from typing import Any, Dict, Mapping, Sequence, Tuple
 
 import matplotlib
-import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import timm
@@ -47,6 +46,7 @@ import torch.nn as nn
 
 
 matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 
 LOGGER = logging.getLogger("convnext_cka")
 
