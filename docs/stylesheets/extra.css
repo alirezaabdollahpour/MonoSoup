@@ -1,0 +1,48 @@
+:root {
+  --mono-bg-soft: #f3f7f7;
+  --mono-border: #d7e3e2;
+  --mono-ink: #102327;
+  --mono-accent: #0f766e;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0.01em;
+}
+
+.md-typeset h1 {
+  color: var(--mono-ink);
+  font-weight: 750;
+}
+
+.md-typeset h2 {
+  border-bottom: 1px solid var(--mono-border);
+  padding-bottom: 0.2rem;
+}
+
+.md-typeset code {
+  border-radius: 0.25rem;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-left: 0.2rem solid var(--mono-accent);
+}
+
+.md-main__inner {
+  max-width: 62rem;
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--mono-border);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.md-typeset blockquote {
+  background: var(--mono-bg-soft);
+  border-left: 0.2rem solid var(--mono-accent);
+  margin: 1rem 0;
+  padding: 0.6rem 0.9rem;
+}

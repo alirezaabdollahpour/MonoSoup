@@ -216,6 +216,42 @@ All scripts:
 4. Run one script with explicit `--data-location`.
 5. Save artifacts with `--output-json` (and script-specific artifact flags).
 
+## Research Blog (GitHub Pages)
+
+A publication-style technical blog is included under `docs/`, with scientific explanations of:
+
+1. MonoSoup layer-wise spectral editing (`MonoSoup.py`).
+2. CLIP block-wise CKA analysis (`CKA.py`).
+3. Reproducible CLI workflows and artifact export.
+
+Main docs files:
+
+1. `mkdocs.yml`
+2. `docs/index.md`
+3. `docs/blog/2026-02-05-monosoup-math.md`
+4. `docs/blog/2026-02-05-cka-deep-dive.md`
+5. `docs/blog/2026-02-05-cli-reproducibility.md`
+
+Local preview:
+
+```bash
+python -m pip install --upgrade pip
+pip install mkdocs mkdocs-material pymdown-extensions
+mkdocs serve
+```
+
+Static build:
+
+```bash
+mkdocs build --strict
+```
+
+GitHub deployment:
+
+1. Workflow file: `.github/workflows/deploy-blog.yml`
+2. Enable GitHub Pages source as `GitHub Actions` in repository settings.
+3. Push to `main` or `master` to trigger deployment.
+
 ## Citation
 
 If you use this repository in your research, please cite the paper and the codebase.

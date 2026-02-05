@@ -1,0 +1,59 @@
+site_name: MonoSoup Research Blog
+site_description: Scientific notes on MonoSoup and CKA implementations for CLIP and ConvNeXt.
+site_url: https://alirezaabdollahpour.github.io/MonoSoup/
+repo_name: alirezaabdollahpour/MonoSoup
+repo_url: https://github.com/alirezaabdollahpour/MonoSoup
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+  font:
+    text: IBM Plex Sans
+    code: JetBrains Mono
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Blog:
+      - MonoSoup Mathematics: blog/2026-02-05-monosoup-math.md
+      - CKA Deep Dive: blog/2026-02-05-cka-deep-dive.md
+      - CLI and Reproducibility: blog/2026-02-05-cli-reproducibility.md
