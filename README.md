@@ -4,13 +4,14 @@ Publication-ready implementations of MonoSoup experiments for CLIP and ConvNeXt,
 
 ## What This Repository Contains
 
-This repository currently focuses on three production-ready scripts:
+This repository currently focuses on four production-ready scripts:
 
 1. `MonoSoup.py`
 2. `Convnext_freevariance_vetterli.py`
-3. `CKA_ConvNext.py`
+3. `CKA.py`
+4. `CKA_ConvNext.py`
 
-All three scripts use explicit CLI arguments, deterministic runtime setup, structured logging, and JSON artifact export for reproducibility.
+All scripts use explicit CLI arguments, deterministic runtime setup, structured logging, and JSON artifact export for reproducibility.
 
 ## Method Summary
 
@@ -161,6 +162,43 @@ Key outputs:
 1. Full CKA JSON (default under `ConvNext/cka/`).
 2. Optional PDF heatmaps (unless `--no-plots`).
 3. Optional compact run summary JSON.
+
+### `CKA.py`
+
+Purpose:
+
+1. Builds CLIP model variants from checkpoints: `pretrained`, `finetuned`, `monosoup`, `highonly`, `lowonly`.
+2. Computes transformer-block linear CKA with respect to the pretrained model.
+3. Optionally evaluates classification accuracy.
+4. Saves CKA JSON artifacts and optional heatmaps.
+
+Typical command:
+
+```bash
+python CKA.py \
+  --pretrained-checkpoint /path/to/model_0.pt \
+  --finetuned-checkpoint /path/to/model_31.pt \
+  --data-location /path/to/data_root \
+  --model-type 32 \
+  --version freevariance \
+  --cka-datasets ImageNet ImageNetA \
+  --max-cka-batches 25 \
+  --device auto \
+  --run-eval \
+  --output-json results/cka_clip_summary.json
+```
+
+Key outputs:
+
+1. Full CKA JSON (default under `CLIP/cka/`).
+2. Optional PDF heatmaps (unless `--no-plots`).
+3. Optional compact run summary JSON.
+
+### `CKA.py` vs `CKA_ConvNext.py`
+
+1. `CKA.py` is for CLIP checkpoints (`open_clip` + `ModelWrapper`) and extracts features from CLIP visual transformer blocks.
+2. `CKA_ConvNext.py` is for timm ConvNeXt paired models and extracts features from `ConvNeXtBlock` modules.
+3. `CKA.py` requires explicit checkpoint paths (`--pretrained-checkpoint`, `--finetuned-checkpoint`), while `CKA_ConvNext.py` builds paired weights directly from timm pretrained model names.
 
 ## Reproducibility Notes
 
