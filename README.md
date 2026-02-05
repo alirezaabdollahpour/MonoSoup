@@ -224,6 +224,10 @@ A publication-style technical blog is included under `docs/`, with scientific ex
 2. CLIP block-wise CKA analysis (`CKA.py`).
 3. Reproducible CLI workflows and artifact export.
 
+Live blog:
+
+<https://alirezaabdollahpour.github.io/MonoSoup/>
+
 Main docs files:
 
 1. `mkdocs.yml`
