@@ -180,4 +180,32 @@ All scripts:
 
 ## Citation
 
-If this code is used in your research, please cite the corresponding MonoSoup paper and this repository.
+If you use this repository in your research, please cite the paper and the codebase.
+
+**Paper**
+
+Model soups need only one ingredient  
+Alireza Abdollahpoorrostam, Nikolaos Dimitriadis, Adam Hazimeh, Pascal Frossard  
+LTS4, École Polytechnique Fédérale de Lausanne (EPFL), Switzerland  
+Corresponding author: `alireza.abdollahpoorrostam@epfl.ch`  
+Repository: <https://github.com/alirezaabdollahpour/MonoSoup>
+
+```bibtex
+@inproceedings{abdollahpoorrostam2026monosoup,
+  title     = {Model soups need only one ingredient},
+  author    = {Abdollahpoorrostam, Alireza and Dimitriadis, Nikolaos and Hazimeh, Adam and Frossard, Pascal},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2026},
+  note      = {Under review},
+  url       = {https://github.com/alirezaabdollahpour/MonoSoup}
+}
+```
+
+```bibtex
+@software{abdollahpoorrostam2026monosoupcode,
+  title  = {MonoSoup},
+  author = {Abdollahpoorrostam, Alireza and Dimitriadis, Nikolaos and Hazimeh, Adam and Frossard, Pascal},
+  year   = {2026},
+  url    = {https://github.com/alirezaabdollahpour/MonoSoup}
+}
+```
